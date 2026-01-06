@@ -1,21 +1,17 @@
-package com.yeditepe.finalexam.navigation
+package com.yeditepe.finalexam.ui
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Text // Text bileşenini import etmeyi unutma
 import androidx.compose.runtime.Composable
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.rememberNavController
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 @Composable
-fun AppNavGraph() {
+fun TaskDetailScreen(title: String) {
 
-    val navController = rememberNavController()
-
-    NavHost(
-        navController = navController,
-        startDestination = "tasks"
-    ) {
-
-        // TODO 1: Add composable for "tasks"
-
-        // TODO 2: Add composable for "taskDetail/{title}"
+    Column(modifier = Modifier.padding(16.dp)) {
+        // TODO 4: Display task title
+        Text(text = title)
     }
 }
